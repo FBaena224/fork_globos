@@ -19,12 +19,16 @@ class Globo
   void dibujate()
   {
       fill(c);
+      imageMode(CENTER);
       ellipse(x,y+100,1,80);
       ellipse(x,y,80,100);
       triangle(x,y+50,x-10,y+60,x+10,y+60);
+      image(cara,x,y,60,60);
   }
   
 }
+
+PImage cara;
 
 ArrayList<Globo> globos;
 
@@ -33,6 +37,8 @@ void setup()
 {
   size(640,480);
   globos = new ArrayList<Globo>();  
+  cara=loadImage("trump.jpg");
+
 }
 
 void draw()
